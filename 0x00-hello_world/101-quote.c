@@ -1,17 +1,15 @@
 #include <unistd.h>
 
 /**
- * main - Entry point
- *
- * Description: A C programme prints some string
- *
- * Return: Always 1 (Error)
+* main - Entry point
+*
+* Description: A C programme prints some string
+*
+* Return: Always 1 (Error)
 */
 
 int main(void)
 {
-	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-write(1, quo, 61);
-        return 1;
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
