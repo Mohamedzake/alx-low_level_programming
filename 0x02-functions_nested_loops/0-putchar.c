@@ -17,5 +17,5 @@ int main(void)
 	printf("h");
 	printf("a");
 	printf("r");
-
+	return (0);
 }
