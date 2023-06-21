@@ -1,4 +1,4 @@
-#includ "main.h"
+#include "main.h"
 
 
 /**
@@ -17,6 +17,6 @@ int main(void)
 	if ((num % 3 == 0) || (num % 5 == 0))
 	sum += num;
 	{
-	_putchar(sum);
+	printf("%d", sum);
 	return (0);
 }
