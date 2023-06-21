@@ -1,27 +1,36 @@
+#include <stdio.h>
 #include "main.h"
-
-
 /**
- * print_to_98 -  prints all natural numbers from n to 98,
- *	followed by a new line.
- *
- * @n: take the input from another
- *
- * Return:print.
+* print_to_98 - checks for alphabetic character
+*
+* @n: take the input from another
+*
 */
-
-
 void print_to_98(int n)
 {
-	int count;
+	int i;
 
-	if (n > 98)
-	for (count = n; count > 98; count--)
-	_putchar(count);
+        if (n < 98)
+	{
+	for (i = n; i <= 98; i++)
+	{
+	printf("%i", i);
+	if (i < 98)
+	{
+	printf(", ");
+	}
+	}
+	}
 	else
-	for (count = n; count < 98; count++)
-	_putchar(count);
-	_putchar('\n');
-
-
+	{
+	for (i = n; i >= 98; i--)
+	{
+	printf("%i", i);
+	if (i > 98)
+	{
+	printf(", ");
+	}
+	}
+	}
+	printf("\n");
 }
