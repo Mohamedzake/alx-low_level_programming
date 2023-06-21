@@ -18,8 +18,9 @@ int main(void)
 	{
 	sum += num;
 	}
+	}
 	_putchar(sum);
 	return (0);
-	}
+	
 
 }
