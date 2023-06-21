@@ -42,7 +42,7 @@ int main(void)
 	for (num = 1; num <= 98; num++)
 	{
 	if (f1o > 0)
-	printf("lu", f1o);
+	printf("%lu", f1o);
 	initial = numLength(max) - 1 - numLength(f1);
 
 	while (f1o > 0 && initial > 0)
@@ -50,7 +50,7 @@ int main(void)
 	printf("%d", 0);
 	initial--;
 	}
-	printf("lu", f1);
+	printf("%lu", f1);
 	sum = (f1 + f2) % max;
 	sumo = f1o + f2o + (f1 + f2) / max;
 	f1 = f2;
