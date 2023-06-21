@@ -4,7 +4,7 @@
 /**
  * print_times_table -  prints the n times table, starting with 0.
  *
- * @n && (result, num, mult): take the input from another
+ * @n: takes number input
  *
  * Return:the n times table
 */
