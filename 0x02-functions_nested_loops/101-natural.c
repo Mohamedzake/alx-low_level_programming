@@ -19,4 +19,4 @@ int main(void)
 	{
 	_putchar(sum);
 	return (0);
-}
+
