@@ -1,7 +1,7 @@
 #include "unistd.h"
 
 /**
- *_putchar - print the code
+ *_putchar- prints the code
  *@c: take the input from another
  * Return: Always 0.
  */
