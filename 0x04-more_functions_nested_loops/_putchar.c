@@ -1,8 +1,8 @@
 #include "unistd.h"
 
 /**
- * main - check the code
- *
+ *_putchar - print the code
+ *@c: take the input from another
  * Return: Always 0.
  */
 
