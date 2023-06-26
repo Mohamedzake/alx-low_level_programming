@@ -17,11 +17,11 @@ void puts2(char *str)
 
 	length = strlen(str);
 
-	for (i = 0; str[i] != '\0'; i += 2)
+	for (i = 0; str[i] != '\0'; ++i)
 	{
-
+	if (i % 2 == 0)
 	
-	printf("%c", str[i]);
+	_putchar(str[i]);
 
 
 	}
