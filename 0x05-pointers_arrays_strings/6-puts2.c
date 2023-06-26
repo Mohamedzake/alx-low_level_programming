@@ -10,12 +10,9 @@
  */
 void puts2(char *str)
 {
-	int length, i;
-
-	str = "0123456789";
+	int i;
 
 
-	length = strlen(str);
 
 	for (i = 0; str[i] != '\0'; ++i)
 	{
@@ -25,7 +22,7 @@ void puts2(char *str)
 
 
 	}
-	printf("\n");
+	_putchar('\n');
 }
 
 
