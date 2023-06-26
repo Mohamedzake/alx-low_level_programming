@@ -12,7 +12,7 @@ void puts2(char *str)
 {
 	int length, i;
 
-
+	str = "0123456789";
 
 
 	length = strlen(str);
