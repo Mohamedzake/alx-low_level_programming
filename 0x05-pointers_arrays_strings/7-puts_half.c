@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- *puts_half - prints half of a string, followed by a new line.
+ *puts_half - prints half of a string, followed by a new line
  *@str: take the input from another
  * Return: void
  */
