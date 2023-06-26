@@ -10,7 +10,7 @@
 void rev_string(char *s)
 {
 	int length, i;
-
+	s = "Holberton!";
 
 	length = strlen(s);
 
