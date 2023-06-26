@@ -11,7 +11,7 @@ void print_rev(char *s)
 {
 	int length, i;
 
-	s = "Hello, World!";
+
 
 
 	length = strlen(s);
