@@ -30,7 +30,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	k = size_r - 1;
 	r[k] = '\0';
 
-	while (i >= 0  j >= 0  carry > 0)
+	while (i >= 0 ||  j >= 0 ||  carry > 0)
 	{
 	int sum = carry;
 
