@@ -1,30 +1,31 @@
-#include "main.h"
-#include <stdio.h>
+#include <string.h>
 
 /**
- **_strncat - concatenates two strings.
- *@dest: take the input from another.
- *@src: take the input from another.
- *@n: take the input from another.
- * Return: Always pointer
- */
+ * *_strncat - concatenates two strings.
+ *
+ * @dest: take the input from another
+ * @src: take the input from another
+ * @n: take the input from another
+ * Return: result
+*/
+
 char *_strncat(char *dest, char *src, int n)
 {
-	char *dest_pt = dest;
+	char *result = dest;
+	int i = 0;
 
-	while (*dest_pt != '\0')
+	while (*dest != '\0')
 	{
-	dest_pt++;
+	dest++;
 	}
 
-	while (n > 0 && *src != '\0')
-	{
-	*dest_pt = *src;
-	dest_pt++;
+	while (i < n && *src != '\0')
+	}
+	*dest = *src;
+	dest++;
 	src++;
-	n--;
+	i++;
 	}
-	*dest_pt = '\0';
-
-	return (dest);
+	*dest = '\0';
+	return (result);
 }
