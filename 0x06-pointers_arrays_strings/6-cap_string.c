@@ -1,5 +1,8 @@
 #include "main.h"
+#include <string.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <stdbool.h>
 
 /**
  **cap_string - capitalizes all words of a string.
@@ -8,24 +11,21 @@
  */
 char *cap_string(char *str)
 {
+	int len = strlen(str);
+	bool capitalize = true;
 	int i;
 
-	if (str[0] >= 'a' && str[0] <= 'z')
+	for (i = 0; i < len; i++) {
+	if (isspace(str[i]) || str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+	str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' ||
+ 	str[i] == ')' || str[i] == '{' || str[i] == '}')
 	{
-	str[0] -= 32;
-	}
-	for (i = 0; str[i] != '\0'; i++)
+	capitalize = true;
+        }
+	else if (capitalize)
 	{
-	if (str[i - 1] == ' '  str[i - 1] == '\t'  str[i - 1] == '\n'
-	str[i - 1] == ','  str[i - 1] == ';'  str[i - 1] == '.'
-	str[i - 1] == '!'  str[i - 1] == '?'  str[i - 1] == '"'
-	str[i - 1] == '('  str[i - 1] == ')'  str[i - 1] == '{'
-	str[i - 1] == '}')
-	{
-	if (str[i] >= 'a' && str[i] <= 'z')
-	{
-	str[i] -= 32;
-	}
+	str[i] = toupper(str[i]);
+	capitalize = false;
 	}
 	}
 	return (str);
