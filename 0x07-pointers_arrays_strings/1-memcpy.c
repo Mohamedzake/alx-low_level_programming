@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- **_memset - fills memory with a constant byte.
+ **_memcpy - copies memory area.
  *@dest: take the input from another .
  *@src: take the input from another .
  *@n: take the input from another .
@@ -15,6 +15,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	for (i = 0; i < n; i++)
 	{
 	dest[i] = src[i];
-	}
+	{
 	return (dest);
 }
