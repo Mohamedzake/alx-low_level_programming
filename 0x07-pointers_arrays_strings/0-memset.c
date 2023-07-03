@@ -2,15 +2,20 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ **_memset - fills memory with a constant byte.
+ *@s: take the input from another .
+ *@b: take the input from another .
+ *@n: take the input from another .
+ * Return: s.
  */
 
-char* _memset(char* s, char b, unsigned int n) {
-    unsigned int i;
-    for (i = 0; i < n; i++) {
-        s[i] = b;
-    }
-    return s;
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+	s[i] = b;
+	}
+	return (s);
 }
