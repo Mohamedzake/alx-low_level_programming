@@ -3,9 +3,9 @@
 
 /**
  *print_chessboard - prints the chessboard.
- *@a: take the input from another .
- * Return: 0 .
- */
+ * @a: take the input from another.
+*/
+
 void print_chessboard(char (*a)[8])
 {
 	int i, j;
@@ -14,7 +14,7 @@ void print_chessboard(char (*a)[8])
 	{
 	for (j = 0; j < 8; j++)
 	{
-	printf("%c ", a[i][j]);
+	printf("%c", a[i][j]);
 	}
 	printf("\n");
 	}
