@@ -1,12 +1,12 @@
 #include "unistd.h"
 
 /**
- * main - check the code
- *
+ *_putchar - check the code
+ *@a: take the input from another .
  * Return: Always 0.
  */
 
 int _putchar(char c)
 {
-        return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
