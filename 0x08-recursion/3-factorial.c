@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
+ *factorial -  returns the factorial of a given number.
+ *@n: take the input from another.
  * Return: Always 0.
  */
 int factorial(int n)
