@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
- * check_palindrome - Recursive helper function
+ *check_palindrome - Recursive helper function
  *	to check if a string is a palindrome.
  * @s: The string to be checked.
  * @start: The starting index of the current comparison.
@@ -27,10 +28,13 @@ int check_palindrome(char *s, int start, int end)
 int is_palindrome(char *s)
 {
 	int length = 0;
+	int start = 0;
+	int end;
 
 	while (s[length] != '\0')
 	length++;
 
-	return (check_palindrome(s, 0, length - 1));
-}
+	end = length - 1;
 
+	return (check_palindrome(s, start, end));
+}
