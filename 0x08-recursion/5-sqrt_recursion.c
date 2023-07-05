@@ -1,5 +1,21 @@
 #include "main.h"
+/**
+ * sqrt_helper - Recursive helper function to calculate the square root.
+ * @n: The number to calculate the square root of.
+ * @guess: The current guess for the square root.
+ *
+ * Return: The square root if it's a natural number, -1 otherwise.
+ */
+int sqrt_helper(int n, int guess)
+{
+        if (guess * guess == n)
+        return (guess);
 
+        if (guess * guess > n)
+        return (-1);
+
+        return (sqrt_helper(n, guess + 1));
+}
 /**
  * _sqrt_recursion - Calculates the natural square root of a number.
  * @n: The number to calculate the square root of.
@@ -22,7 +38,8 @@ int _sqrt_recursion(int n)
  *
  * Return: The square root if it's a natural number, -1 otherwise.
  */
-int sqrt_helper(int n, int guess)
+
+/**int sqrt_helper(int n, int guess)
 {
 	if (guess * guess == n)
 	return (guess);
@@ -31,4 +48,4 @@ int sqrt_helper(int n, int guess)
 	return (-1);
 
 	return (sqrt_helper(n, guess + 1));
-}
+}*/
