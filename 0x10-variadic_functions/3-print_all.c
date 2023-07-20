@@ -7,8 +7,9 @@
  */
 void print_char(va_list args)
 {
-    char c = va_arg(args, int);
-    printf("%c", c);
+	char c = va_arg(args, int);
+
+	printf("%c", c);
 }
 
 /**
@@ -17,8 +18,9 @@ void print_char(va_list args)
  */
 void print_integer(va_list args)
 {
-    int num = va_arg(args, int);
-    printf("%d", num);
+	int num = va_arg(args, int);
+
+	printf("%d", num);
 }
 
 /**
@@ -27,8 +29,9 @@ void print_integer(va_list args)
  */
 void print_float(va_list args)
 {
-    double num = va_arg(args, double);
-    printf("%f", num);
+	double num = va_arg(args, double);
+
+	printf("%f", num);
 }
 
 /**
@@ -37,10 +40,11 @@ void print_float(va_list args)
  */
 void print_string(va_list args)
 {
-    char *str = va_arg(args, char *);
-    if (str == NULL)
-        str = "(nil)";
-    printf("%s", str);
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+	str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -49,38 +53,38 @@ void print_string(va_list args)
  */
 void print_all(const char * const format, ...)
 {
-    va_list args;
-    int i = 0, j = 0;
-    char *separator = "";
+	va_list args;
+	int i = 0, j = 0;
+	char *separator = "";
 
-    print_fn_t print_fns[] = {
-        {'c', print_char},
-        {'i', print_integer},
-        {'f', print_float},
-        {'s', print_string},
-        {0, NULL}
-    };
+	print_fn_t print_fns[] = {
+	{'c', print_char},
+	{'i', print_integer},
+	{'f', print_float},
+	{'s', print_string},
+	{0, NULL}
+	};
 
-    va_start(args, format);
+	va_start(args, format);
 
-    while (format && format[i])
-    {
-        j = 0;
-        while (print_fns[j].format)
-        {
-            if (print_fns[j].format == format[i])
-            {
-                printf("%s", separator);
-                print_fns[j].printer(args);
-                separator = ", ";
-                break;
-            }
-            j++;
-        }
-        i++;
-    }
+	while (format && format[i])
+	{
+	j = 0;
+	while (print_fns[j].format)
+	{
+	if (print_fns[j].format == format[i])
+	{
+	printf("%s", separator);
+	print_fns[j].printer(args);
+	separator = ", ";
+	break;
+	}
+	j++;
+	}
+	i++;
+	}
 
-    va_end(args);
-    printf("\n");
+	va_end(args);
+	printf("\n");
 }
 
